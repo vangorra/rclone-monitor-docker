@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
 RUN apk --no-cache add bash inotify-tools ca-certificates && \
-	apk --no-cache add --virtual=build-dependencies wget curl unzip ca-certificates && \
+	apk --no-cache add --virtual=build-dependencies wget curl unzip && \
 	wget -o rclone.zip https://downloads.rclone.org/v1.40/rclone-v1.40-linux-386.zip && \
 	unzip rclone-v1.40-linux-386.zip && \
 	cp rclone-v1.40-linux-386/rclone /usr/local/bin/rclone && \
